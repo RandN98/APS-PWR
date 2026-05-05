@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Afasta o logo dos links */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 20px 5%;
+    background-color: #333;
+    color: white;
+}
+
+.nav-links {
+    display: flex; /* Transforma a lista em uma linha */
+    list-style: none;
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #00d1b2; /* Efeito de cor ao passar o mouse */
+}
+
+/* Destaque para o botão de Contato */
+.btn-contato {
+    background-color: #00d1b2;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.btn-contato:hover {
+    background-color: #00b89c;
+    color: white !important;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/*VIDEO DE FUNDO*/
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantém proporção preenchendo a tela */
+  z-index: -1; /* fica atrás de todo o conteúdo */
+  pointer-events: none; /* permite clicar nos elementos acima do vídeo */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* camada escura para melhor contraste */
+  z-index: -1; /* fica atrás de todo o conteúdo */
+}
