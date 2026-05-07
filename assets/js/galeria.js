@@ -1,14 +1,14 @@
 const imagensGaleria = [
   {
-    src: "Src/Imagens/img_atropelamento_1.jpg",
+    src: "assets/img/img_atropelamento_1.jpg",
     alt: "Imagem relacionada ao impacto das rodovias na fauna"
   },
   {
-    src: "Src/Imagens/img_atropelamento_2.jpg",
+    src: "assets/img/img_atropelamento_2.jpg",
     alt: "Imagem relacionada ao impacto das rodovias na fauna"
   },
   {
-    src: "Src/Imagens/img_atropelamento_3.jpg",
+    src: "assets/img/img_atropelamento_3.jpg",
     alt: "Imagem relacionada ao impacto das rodovias na fauna"
   }
 ];

@@ -6,7 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conheça a Travessia Ambiental | Vamos salvar nossa fauna!</title>
 
-  <link rel="stylesheet" href="Estilos/styleMain.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/contexto-fauna.css">
+  <link rel="stylesheet" href="assets/css/galeria-modal.css">
+  <link rel="stylesheet" href="assets/css/tipos-passagens.css">
+  <link rel="stylesheet" href="assets/css/travessia-cenario.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
 <body>
@@ -30,7 +37,7 @@
 
     <section class="hero-video" aria-label="Apresentação da Travessia Ambiental">
       <video autoplay loop muted playsinline preload="auto" id="bg-video">
-        <source src="Src/Videos/TravessiaAmbiental.mp4" type="video/mp4">
+        <source src="assets/videos/TravessiaAmbiental.mp4" type="video/mp4">
         Seu navegador não suporta o elemento de vídeo.
       </video>
 
@@ -141,15 +148,64 @@
       </div>
     </section>
 
-    <section class="travessia-section" id="travessia" aria-labelledby="titulo-travessia">
-      <div class="travessia-texto">
-        <h2 id="titulo-travessia">Como funciona uma passarela verde?</h2>
+    <section class="tipos-passagens-section" id="tipos-passagens">
+      <div class="tipos-passagens-container">
 
-        <p>
-          As passarelas verdes conectam áreas de floresta separadas por rodovias, permitindo que os animais
-          atravessem com segurança, sem precisar passar pela pista onde circulam os veículos.
-        </p>
-      </div>
+        <div class="tipos-passagens-header">
+          <span class="section-tag">Tipos de Passagens de Fauna</span>
+
+          <h2>Estruturas criadas para reconectar a vida silvestre</h2>
+
+          <p>
+            As passagens de fauna podem ser construídas de diferentes formas, dependendo do tipo de animal,
+            do ambiente ao redor da via e das características da rodovia. Entre elas, estão as passagens
+            superiores, subterrâneas e suspensas, todas com o objetivo de reduzir atropelamentos e permitir
+            o deslocamento seguro da fauna.
+          </p>
+        </div>
+
+        <!-- TIPO 1 -->
+        <article class="tipo-passagem-card tipo-destaque">
+          <div class="tipo-passagem-numero">01</div>
+
+          <div class="tipo-passagem-conteudo">
+            <span class="tipo-categoria">Passagens Superiores</span>
+
+            <h3>Viadutos de Fauna, Ecodutos ou Pontes Verdes</h3>
+
+            <p>
+              Os <strong>viadutos de fauna</strong>, também chamados de <strong>ecodutos</strong> ou
+              <strong>pontes verdes</strong>, são estruturas construídas sobre rodovias para permitir que
+              animais silvestres atravessem a via sem contato direto com o tráfego.
+            </p>
+
+            <p>
+              Diferente de uma ponte comum, essas estruturas são cobertas por solo, vegetação nativa,
+              troncos, pedras e outros elementos naturais, tornando a travessia mais parecida com o habitat
+              dos animais. Dessa forma, ajudam a reconectar fragmentos de floresta separados pela estrada.
+            </p>
+
+            <p>
+              Geralmente possuem grande largura, podendo variar entre <strong>40 e 100 metros</strong>.
+              São especialmente importantes para grandes mamíferos, como antas, cervos, onças e outros
+              animais que precisam de áreas amplas para se deslocar. Quando bem planejados, também podem
+              ser utilizados por espécies menores, desde que ofereçam abrigo, sombra e vegetação adequada.
+            </p>
+          </div>
+
+          <aside class="tipo-passagem-info">
+            <h4>Características principais</h4>
+
+            <ul>
+              <li>Travessia por cima da rodovia;</li>
+              <li>Cobertura com solo e vegetação nativa;</li>
+              <li>Reconexão de áreas naturais fragmentadas;</li>
+              <li>Redução de atropelamentos;</li>
+              <li>Uso por grandes mamíferos e pequenos animais.</li>
+            </ul>
+          </aside>
+
+          <section class="travessia-section" id="travessia" aria-labelledby="titulo-travessia">
 
       <div class="cenario" aria-label="Animação mostrando animais atravessando uma passarela verde sobre uma rodovia">
 
@@ -176,11 +232,71 @@
 
       </div>
     </section>
+        </article>
+
+        <!-- TIPO 2 -->
+        <article class="tipo-passagem-card">
+          <div class="tipo-passagem-numero">02</div>
+
+          <div class="tipo-passagem-conteudo">
+            <span class="tipo-categoria">Passagens Superiores</span>
+
+            <h3>Passagens Suspensas</h3>
+
+            <p>
+              São estruturas aéreas voltadas principalmente para animais arborícolas e escansoriais,
+              como primatas, preguiças, marsupiais e pequenos mamíferos. Elas permitem que esses animais
+              atravessem a via sem descer ao solo.
+            </p>
+          </div>
+
+          <aside class="tipo-passagem-info">
+            <h4>Indicadas para</h4>
+
+            <ul>
+              <li>Animais que vivem nas árvores;</li>
+              <li>Locais próximos a fragmentos florestais;</li>
+              <li>Áreas com risco de uso da rede elétrica;</li>
+              <li>Travessias em rodovias ou áreas urbanas.</li>
+            </ul>
+          </aside>
+        </article>
+
+        <!-- TIPO 3 -->
+        <article class="tipo-passagem-card">
+          <div class="tipo-passagem-numero">03</div>
+
+          <div class="tipo-passagem-conteudo">
+            <span class="tipo-categoria">Passagens Inferiores</span>
+
+            <h3>Passagens Subterrâneas</h3>
+
+            <p>
+              São túneis, galerias ou estruturas construídas abaixo da rodovia, permitindo que os animais
+              atravessem por baixo da via. Costumam ser usadas por pequenos mamíferos, répteis, anfíbios
+              e outras espécies que se deslocam próximas ao solo.
+            </p>
+          </div>
+
+          <aside class="tipo-passagem-info">
+            <h4>Funcionam melhor com</h4>
+
+            <ul>
+              <li>Cercas direcionadoras;</li>
+              <li>Boa drenagem;</li>
+              <li>Entrada ampla e visível;</li>
+              <li>Ambiente interno seco e seguro.</li>
+            </ul>
+          </aside>
+        </article>
+
+      </div>
+    </section>
 
   </main>
 
-  <script src="Scripts/travessia.js"></script>
-  <script src="Scripts/galeria.js"></script>
+  <script src="assets/js/galeria.js"></script>
+  <script src="assets/js/travessia.js"></script>
 
 </body>
 

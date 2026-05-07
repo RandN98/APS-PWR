@@ -1,0 +1,140 @@
+@media (max-width: 992px) {
+    .contexto-fauna {
+        padding: 80px 20px;
+    }
+
+    .contexto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contexto-fauna h2 {
+        max-width: 100%;
+    }
+
+    .contexto-fauna .container > p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 18px 6%;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .hero-video {
+        min-height: calc(100vh - 110px);
+    }
+
+    .hero-content {
+        padding: 0 24px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .contexto-fauna::before {
+        height: 95px;
+        opacity: 0.22;
+    }
+
+    .contexto-fauna::after {
+        top: 45px;
+        height: 120px;
+        opacity: 0.32;
+    }
+
+    .contexto-fauna {
+        padding: 70px 16px;
+    }
+
+    .contexto-card {
+        padding: 22px 18px;
+        border-radius: 20px;
+    }
+
+    .btn-galeria-alerta {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .modal-galeria {
+        padding: 14px;
+    }
+
+    .modal-galeria-content {
+        padding: 18px;
+        border-radius: 22px;
+    }
+
+    .modal-aviso {
+        margin-right: 48px;
+        font-size: 0.88rem;
+    }
+
+    .modal-nav {
+        width: 40px;
+        height: 50px;
+        font-size: 2.4rem;
+    }
+
+    .modal-prev {
+        left: 8px;
+    }
+
+    .modal-next {
+        right: 8px;
+    }
+
+    .modal-imagem-area img {
+        max-height: 62vh;
+        border-radius: 16px;
+    }
+
+    .travessia-section {
+        padding: 60px 6%;
+    }
+
+    .travessia-texto h2 {
+        font-size: 28px;
+    }
+
+    .travessia-texto p {
+        font-size: 16px;
+    }
+
+    .cenario {
+        height: 430px;
+    }
+
+    .passarela {
+        top: 170px;
+        height: 110px;
+    }
+
+    .animal {
+        font-size: 46px;
+    }
+
+    .animal-esquerda {
+        left: -90px;
+    }
+
+    .animal-direita {
+        right: -90px;
+    }
+}

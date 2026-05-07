@@ -1,0 +1,166 @@
+.galeria-alerta {
+    margin-top: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-galeria-alerta {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 16px 24px;
+    border: 0;
+    border-radius: 18px;
+    background: rgba(255, 247, 242, 0.12);
+    color: #fff9f6;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 12px 28px rgba(54, 8, 8, 0.2);
+    backdrop-filter: blur(8px);
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-galeria-alerta span {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 235, 225, 0.85);
+}
+
+.btn-galeria-alerta:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 247, 242, 0.18);
+    box-shadow: 0 16px 34px rgba(54, 8, 8, 0.28);
+}
+
+.modal-galeria {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.modal-galeria.ativo {
+    display: flex;
+}
+
+.modal-galeria-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 7, 7, 0.78);
+    backdrop-filter: blur(6px);
+}
+
+.modal-galeria-content {
+    position: relative;
+    z-index: 1;
+    width: min(960px, 100%);
+    max-height: 90vh;
+    padding: 22px;
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 35%),
+        linear-gradient(180deg, #7d1f1f 0%, #3f1111 100%);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    color: #fff7f2;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 247, 242, 0.12);
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.modal-fechar:hover {
+    background: rgba(255, 247, 242, 0.22);
+    transform: scale(1.05);
+}
+
+.modal-aviso {
+    margin: 4px 54px 18px 0;
+    padding: 12px 16px;
+    border-radius: 16px;
+    background: rgba(255, 247, 242, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    font-size: 0.95rem;
+    color: rgba(255, 247, 242, 0.92);
+}
+
+.modal-imagem-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-imagem-area img {
+    width: 100%;
+    max-height: 68vh;
+    object-fit: contain;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.22);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 58px;
+    border: 0;
+    border-radius: 18px;
+    background: rgba(255, 247, 242, 0.16);
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.modal-nav:hover {
+    background: rgba(255, 247, 242, 0.28);
+}
+
+.modal-prev {
+    left: 14px;
+}
+
+.modal-next {
+    right: 14px;
+}
+
+.modal-legenda {
+    margin-top: 14px;
+    text-align: center;
+}
+
+.modal-legenda p {
+    margin: 0;
+    color: rgba(255, 247, 242, 0.85);
+    font-size: 0.95rem;
+}
+
+body.modal-aberto {
+    overflow: hidden;
+}
