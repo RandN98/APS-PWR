@@ -1,33 +1,187 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conheça a Travessia Ambiental | Vamos salvar nossa fauna!</title>
-    <link rel="stylesheet" href="Estilos/styleMain.css">    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conheça a Travessia Ambiental | Vamos salvar nossa fauna!</title>
+
+  <link rel="stylesheet" href="Estilos/styleMain.css">
 </head>
+
 <body>
-    <nav class="navbar">
-    <a href="index.html" class="logo">Travessia <span>Ambiental</span></a>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Início</a></li>
-      <li><a href="contPrincipal.html">Saiba Mais</a></li>
-      <li><a href="contatoForm.html">Contato</a></li>
-      <li><a href="sobreGrupo.html">Sobre Nós</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="navbar" aria-label="Menu principal">
+      <a href="index.html" class="logo" aria-label="Página inicial da Travessia Ambiental">
+        Travessia <span>Ambiental</span>
+      </a>
 
-    <h1>Conheça a Travessia Ambiental</h1>
-    <p>
-        A Travessia Ambiental é um projeto dedicado à conservação da fauna e à promoção da conscientização ambiental. Nosso objetivo é proteger a biodiversidade, preservar os habitats naturais e educar as pessoas sobre a importância de cuidar do meio ambiente. Através de ações de conservação, educação ambiental e engajamento comunitário, buscamos criar um futuro sustentável para as próximas gerações. Junte-se a nós nessa jornada para salvar nossa fauna e proteger nosso planeta!
-    </p>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active" aria-current="page">Início</a></li>
+        <li><a href="contPrincipal.html">Saiba Mais</a></li>
+        <li><a href="contatoForm.html">Contato</a></li>
+        <li><a href="sobreGrupo.html">Sobre Nós</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <video controls autoplay loop muted id="bg-video">
-    <source src="TravessiaAmbiental.mp4" type="video/mp4">
-    Seu navegador não suporta o elemento de vídeo.
-  </video>
-  <div class="overlay"></div>
+  <main>
+
+    <section class="hero-video" aria-label="Apresentação da Travessia Ambiental">
+      <video autoplay loop muted playsinline preload="auto" id="bg-video">
+        <source src="Src/Videos/TravessiaAmbiental.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+
+      <div class="hero-content">
+        <h1>Conheça a Travessia Ambiental</h1>
+
+        <p>
+          As passagens de fauna, também conhecidas como ecodutos ou pontes verdes, são estruturas que cruzam rodovias,
+          ferrovias e outras vias para permitir que animais silvestres se desloquem com segurança entre fragmentos
+          florestais. Elas ajudam a reduzir atropelamentos, diminuir os impactos da fragmentação de habitats e manter a
+          conectividade dos ecossistemas.
+        </p>
+
+        <p>
+          A Travessia Ambiental nasce com o propósito de valorizar essas soluções e promover a conservação da fauna por
+          meio da conscientização ambiental. Nosso objetivo é proteger a biodiversidade, preservar habitats naturais e
+          incentivar a sociedade a cuidar do meio ambiente, construindo juntos um futuro mais sustentável para as
+          próximas gerações.
+        </p>
+
+      </div>
+
+    </section>
+
+    <section class="contexto-fauna">
+      <div class="container">
+        <h2>Por que precisamos de<br>Passagens de Fauna?</h2>
+
+        <p>
+          No Brasil, a expansão da malha rodoviária trouxe desenvolvimento e conexão entre cidades,
+          mas também gerou um impacto silencioso sobre a biodiversidade. Com cerca de 1,7 milhão de
+          quilômetros de estradas, muitas áreas naturais foram divididas, transformando rodovias em
+          verdadeiras barreiras para diversas espécies de animais silvestres.
+        </p>
+
+        <div class="contexto-grid">
+          <div class="contexto-card">
+            <h3>475 milhões</h3>
+            <p>
+              Estimativa de animais mortos por atropelamento todos os anos nas rodovias brasileiras.
+            </p>
+          </div>
+
+          <div class="contexto-card">
+            <h3>15 por segundo</h3>
+            <p>
+              Em média, esse é o número de animais que perdem a vida tentando atravessar estradas.
+            </p>
+          </div>
+
+          <div class="contexto-card">
+            <h3>90%</h3>
+            <p>
+              A maioria das vítimas são pequenos vertebrados, como anfíbios, répteis e pequenos mamíferos.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          Além da mortalidade direta, as rodovias provocam a fragmentação dos habitats, isolando
+          populações e comprometendo a reprodução, a busca por alimento e a diversidade genética das
+          espécies.
+        </p>
+
+        <p>
+          As passagens de fauna, como túneis ecológicos e pontes verdes, ajudam a reconectar esses
+          ambientes, permitindo que os animais atravessem com segurança. Dessa forma, elas contribuem
+          para a preservação da biodiversidade, para o equilíbrio dos ecossistemas e também para a
+          segurança das pessoas nas estradas.
+        </p>
+      </div>
+
+      <div class="galeria-alerta">
+        <button type="button" class="btn-galeria-alerta" id="abrirGaleria">
+          Clique aqui para visualizar imagens
+          <span>ATENÇÃO: imagens fortes</span>
+        </button>
+      </div>
+
+      <div class="modal-galeria" id="modalGaleria" aria-hidden="true">
+        <div class="modal-galeria-overlay" id="fecharGaleriaOverlay"></div>
+
+        <div class="modal-galeria-content" role="dialog" aria-modal="true" aria-label="Galeria de imagens">
+          <button type="button" class="modal-fechar" id="fecharGaleria" aria-label="Fechar galeria">
+            ×
+          </button>
+
+          <div class="modal-aviso">
+            <strong>Atenção:</strong> as imagens a seguir podem ser sensíveis.
+          </div>
+
+          <div class="modal-imagem-area">
+            <button type="button" class="modal-nav modal-prev" id="imagemAnterior" aria-label="Imagem anterior">
+              ‹
+            </button>
+
+            <img id="imagemGaleria" src="img/fauna-01.jpg" alt="Imagem relacionada ao impacto das rodovias na fauna">
+
+            <button type="button" class="modal-nav modal-next" id="proximaImagem" aria-label="Próxima imagem">
+              ›
+            </button>
+          </div>
+
+          <div class="modal-legenda">
+            <p id="legendaGaleria">Imagem 1 de 3</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="travessia-section" id="travessia" aria-labelledby="titulo-travessia">
+      <div class="travessia-texto">
+        <h2 id="titulo-travessia">Como funciona uma passarela verde?</h2>
+
+        <p>
+          As passarelas verdes conectam áreas de floresta separadas por rodovias, permitindo que os animais
+          atravessem com segurança, sem precisar passar pela pista onde circulam os veículos.
+        </p>
+      </div>
+
+      <div class="cenario" aria-label="Animação mostrando animais atravessando uma passarela verde sobre uma rodovia">
+
+        <div class="floresta floresta-esquerda" aria-hidden="true"></div>
+        <div class="floresta floresta-direita" aria-hidden="true"></div>
+
+        <div class="rodovia" aria-hidden="true">
+          <div class="faixa"></div>
+
+          <div class="carro carro-1"></div>
+          <div class="carro carro-2"></div>
+          <div class="carro carro-3"></div>
+        </div>
+
+        <div class="passarela">
+          <div class="grama" aria-hidden="true"></div>
+
+          <div class="animal animal-1 animal-esquerda">🐷</div>
+          <div class="animal animal-2 animal-direita">🐵</div>
+          <div class="animal animal-3 animal-esquerda">🦝</div>
+          <div class="animal animal-4 animal-direita">🐰</div>
+          <div class="animal animal-5 animal-esquerda">🦊</div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="Scripts/travessia.js"></script>
+  <script src="Scripts/galeria.js"></script>
 
 </body>
+
 </html>
