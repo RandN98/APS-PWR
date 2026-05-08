@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="assets/css/galeria-modal.css">
   <link rel="stylesheet" href="assets/css/tipos-passagens.css">
   <link rel="stylesheet" href="assets/css/travessia-cenario.css">
+  <link rel="stylesheet" href="assets/css/suspenso-cenario.css">
+  <link rel="stylesheet" href="assets/css/subterraneo-cenario.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
@@ -207,31 +209,32 @@
 
           <section class="travessia-section" id="travessia" aria-labelledby="titulo-travessia">
 
-      <div class="cenario" aria-label="Animação mostrando animais atravessando uma passarela verde sobre uma rodovia">
+            <div class="cenario"
+              aria-label="Animação mostrando animais atravessando uma passarela verde sobre uma rodovia">
 
-        <div class="floresta floresta-esquerda" aria-hidden="true"></div>
-        <div class="floresta floresta-direita" aria-hidden="true"></div>
+              <div class="floresta floresta-esquerda" aria-hidden="true"></div>
+              <div class="floresta floresta-direita" aria-hidden="true"></div>
 
-        <div class="rodovia" aria-hidden="true">
-          <div class="faixa"></div>
+              <div class="rodovia" aria-hidden="true">
+                <div class="faixa"></div>
 
-          <div class="carro carro-1"></div>
-          <div class="carro carro-2"></div>
-          <div class="carro carro-3"></div>
-        </div>
+                <div class="carro carro-1"></div>
+                <div class="carro carro-2"></div>
+                <div class="carro carro-3"></div>
+              </div>
 
-        <div class="passarela">
-          <div class="grama" aria-hidden="true"></div>
+              <div class="passarela">
+                <div class="grama" aria-hidden="true"></div>
 
-          <div class="animal animal-1 animal-esquerda">🐷</div>
-          <div class="animal animal-2 animal-direita">🐵</div>
-          <div class="animal animal-3 animal-esquerda">🦝</div>
-          <div class="animal animal-4 animal-direita">🐰</div>
-          <div class="animal animal-5 animal-esquerda">🦊</div>
-        </div>
+                <div class="animal animal-1 animal-esquerda">🐷</div>
+                <div class="animal animal-2 animal-direita">🐵</div>
+                <div class="animal animal-3 animal-esquerda">🦝</div>
+                <div class="animal animal-4 animal-direita">🐰</div>
+                <div class="animal animal-5 animal-esquerda">🦊</div>
+              </div>
 
-      </div>
-    </section>
+            </div>
+          </section>
         </article>
 
         <!-- TIPO 2 -->
@@ -260,6 +263,83 @@
               <li>Travessias em rodovias ou áreas urbanas.</li>
             </ul>
           </aside>
+
+          <section class="suspensa-section">
+            <div class="suspensa-cenario"
+              aria-label="Animação mostrando animais atravessando uma passarela suspensa sobre uma rodovia">
+
+              <div class="s-ceu"></div>
+
+              <!-- Árvores esquerda -->
+              <div class="s-arvore s-arvore-esq">
+                <svg viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="85" y="200" width="30" height="120" fill="#3a2a10" />
+                  <ellipse cx="100" cy="170" rx="70" ry="80" fill="#1b5e20" />
+                  <ellipse cx="70" cy="200" rx="50" ry="60" fill="#2e7d32" />
+                  <ellipse cx="130" cy="190" rx="55" ry="65" fill="#1f6b2c" />
+                  <ellipse cx="100" cy="140" rx="55" ry="65" fill="#2e8b3c" />
+                  <ellipse cx="80" cy="155" rx="35" ry="40" fill="#43a047" />
+                  <ellipse cx="120" cy="148" rx="38" ry="42" fill="#388e3c" />
+                </svg>
+              </div>
+
+              <!-- Árvores direita -->
+              <div class="s-arvore s-arvore-dir">
+                <svg viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="85" y="200" width="30" height="120" fill="#3a2a10" />
+                  <ellipse cx="100" cy="165" rx="75" ry="85" fill="#145c25" />
+                  <ellipse cx="70" cy="195" rx="52" ry="62" fill="#1f6b2c" />
+                  <ellipse cx="135" cy="185" rx="58" ry="68" fill="#2e7d32" />
+                  <ellipse cx="100" cy="135" rx="58" ry="68" fill="#43a047" />
+                  <ellipse cx="75" cy="150" rx="38" ry="42" fill="#388e3c" />
+                  <ellipse cx="122" cy="144" rx="40" ry="44" fill="#2e8b3c" />
+                </svg>
+              </div>
+
+              <!-- Rodovia -->
+              <div class="s-rodovia">
+                <div class="s-faixa"></div>
+                <div class="s-carro s-carro-1"></div>
+                <div class="s-carro s-carro-2"></div>
+                <div class="s-carro s-carro-3"></div>
+              </div>
+
+              <!-- Postes -->
+              <div class="s-poste s-poste-esq"></div>
+              <div class="s-poste s-poste-dir"></div>
+
+              <!-- Cordas via SVG -->
+              <svg class="s-corda-svg" viewBox="0 0 1000 320" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <!-- Cabo principal de sustentação (catenária) -->
+                <path d="M220,10 Q500,60 780,10" fill="none" stroke="#8B6914" stroke-width="3" opacity="0.9" />
+                <!-- Cabos verticais (pendurais) -->
+                <line x1="280" y1="18" x2="280" y2="145" stroke="#8B6914" stroke-width="1.5" opacity="0.6" />
+                <line x1="340" y1="30" x2="340" y2="145" stroke="#8B6914" stroke-width="1.5" opacity="0.6" />
+                <line x1="400" y1="38" x2="400" y2="145" stroke="#8B6914" stroke-width="1.5" opacity="0.6" />
+                <line x1="460" y1="43" x2="460" y2="145" stroke="#8B6914" stroke-width="1.5" opacity="0.6" />
+                <line x1="500" y1="44" x2="500" y2="145" stroke="#8B6914" stroke-width="1.5" opacity="0.6" />
+                <line x1="540" y1="43" x2="540" y2="145" stroke="#8B6914" stroke-width="1.5" opacity="0.6" />
+                <line x1="600" y1="38" x2="600" y2="145" stroke="#8B6914" stroke-width="1.5" opacity="0.6" />
+                <line x1="660" y1="30" x2="660" y2="145" stroke="#8B6914" stroke-width="1.5" opacity="0.6" />
+                <line x1="720" y1="18" x2="720" y2="145" stroke="#8B6914" stroke-width="1.5" opacity="0.6" />
+                <!-- Cabo de ancoragem nas árvores -->
+                <line x1="220" y1="10" x2="160" y2="40" stroke="#6B4F10" stroke-width="2" opacity="0.8" />
+                <line x1="780" y1="10" x2="840" y2="40" stroke="#6B4F10" stroke-width="2" opacity="0.8" />
+              </svg>
+
+              <!-- Passarela -->
+              <div class="s-passarela"></div>
+
+              <!-- Animais -->
+              <div class="s-animal s-animal-esq sa1">🐒</div>
+              <div class="s-animal s-animal-dir sa2">🦥</div>
+              <div class="s-animal s-animal-esq sa3">🐿️</div>
+              <div class="s-animal s-animal-dir sa4">🦎</div>
+              <div class="s-animal s-animal-esq sa5">🐨</div>
+            </div>
+          </section>
+
         </article>
 
         <!-- TIPO 3 -->
@@ -288,6 +368,50 @@
               <li>Ambiente interno seco e seguro.</li>
             </ul>
           </aside>
+
+          <section class="tunel-section">
+            <div class="tunel-cenario" aria-label="Animação mostrando animais atravessando um túnel sob uma rodovia">
+
+              <!-- Terra dos lados -->
+              <div class="tunel-terra tunel-terra-esq"></div>
+              <div class="tunel-terra tunel-terra-dir"></div>
+
+              <!-- Solo + asfalto + carros no topo -->
+              <div class="tunel-solo"></div>
+              <div class="tunel-asfalto"></div>
+              <div class="tunel-faixa"></div>
+              <div class="tunel-carro tunel-carro-1"></div>
+              <div class="tunel-carro tunel-carro-2"></div>
+              <div class="tunel-carro tunel-carro-3"></div>
+
+              <!-- Cercas direcionadoras -->
+              <div class="tunel-cerca">
+                <div class="tunel-cerca-bar" style="left:20%"></div>
+                <div class="tunel-cerca-bar" style="left:25%"></div>
+                <div class="tunel-cerca-bar" style="left:30%"></div>
+                <div class="tunel-cerca-bar" style="left:35%"></div>
+                <div class="tunel-cerca-bar" style="left:65%"></div>
+                <div class="tunel-cerca-bar" style="left:70%"></div>
+                <div class="tunel-cerca-bar" style="left:75%"></div>
+                <div class="tunel-cerca-bar" style="left:80%"></div>
+                <div class="tunel-cerca-fio"></div>
+                <div class="tunel-cerca-fio2"></div>
+              </div>
+
+              <!-- Galeria subterrânea -->
+              <div class="tunel-galeria"></div>
+              <div class="tunel-interior"></div>
+              <div class="tunel-piso"></div>
+              <div class="tunel-drenagem"></div>
+
+              <!-- Animais -->
+              <div class="tunel-animal tunel-animal-esq ta1">🦎</div>
+              <div class="tunel-animal tunel-animal-dir ta2">🐢</div>
+              <div class="tunel-animal tunel-animal-esq ta3">🦔</div>
+              <div class="tunel-animal tunel-animal-dir ta4">🐀</div>
+            </div>
+          </section>
+
         </article>
 
       </div>

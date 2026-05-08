@@ -27,7 +27,7 @@
     position: relative;
     width: 100%;
     max-width: 1100px;
-    height: 550px;
+    height: 380px;
     margin: 0 auto;
     border-radius: 24px;
     overflow: hidden;
@@ -147,7 +147,7 @@
 
 .passarela {
     position: absolute;
-    top: 210px;
+    top: 130px;
     left: 15%;
     width: 70%;
     height: 130px;
@@ -260,9 +260,9 @@
 }
 
 .travessia-section {
-  padding: 0 !important;
+  min-height: unset !important;
+  padding: 0 0 30px 0 !important; /* só um respiro embaixo */
 }
-
 
 
 @keyframes animalDaEsquerda {

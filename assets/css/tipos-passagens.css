@@ -164,10 +164,6 @@
   margin-bottom: 0;
 }
 
-.tipo-passagem-card.tipo-destaque {
-  padding-bottom: 0;
-}
-
 /* Responsivo */
 @media (max-width: 950px) {
   .tipo-passagem-card {

@@ -1,0 +1,616 @@
+.pi-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 80px 1.4fr 0.8fr;
+    gap: 28px;
+    align-items: start;
+    padding: 30px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.23);
+    backdrop-filter: blur(8px);
+    font-family: inherit;
+}
+
+.pi-card.destaque {
+    background:
+        linear-gradient(135deg, rgba(148, 201, 93, 0.24), rgba(255, 255, 255, 0.09));
+    border-color: rgba(216, 243, 176, 0.3);
+    padding-bottom: 0;
+}
+
+.pi-numero {
+    width: 64px;
+    height: 64px;
+    display: grid;
+    place-items: center;
+    border-radius: 22px;
+    background: rgba(216, 243, 176, 0.16);
+    border: 1px solid rgba(216, 243, 176, 0.28);
+    color: #d8f3b0;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.pi-categoria {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #d8f3b0;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.pi-conteudo h3 {
+    margin: 0 0 16px;
+    color: #ffffff;
+    font-size: clamp(1.45rem, 3vw, 2.1rem);
+    line-height: 1.2;
+}
+
+.pi-conteudo p {
+    margin: 0 0 15px;
+    color: #e8f1df;
+    font-size: 1.02rem;
+    line-height: 1.75;
+}
+
+.pi-conteudo p:last-child {
+    margin-bottom: 0;
+}
+
+.pi-info {
+    padding: 24px;
+    border-radius: 22px;
+    background: rgba(0, 0, 0, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.pi-info h4 {
+    margin: 0 0 16px;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+.pi-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pi-info li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    color: #eef7e8;
+    line-height: 1.55;
+}
+
+.pi-info li::before {
+    content: "🌿";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.pi-info li:last-child {
+    margin-bottom: 0;
+}
+
+/* CENÁRIO - PASSAGEM SUBTERRÂNEA */
+.tunel-section {
+    grid-column: 1 / -1;
+    min-height: 0;
+    padding: 0 0 30px;
+}
+
+.tunel-cenario {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: 380px;
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    background: linear-gradient(#8ecf7b, #5c3b24);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Florestas laterais / taludes */
+.tunel-terra {
+    position: absolute;
+    top: 0;
+    width: 32%;
+    height: 100%;
+    z-index: 1;
+    background:
+        radial-gradient(circle at 10% 12%, #1b5e20 0 18px, transparent 19px),
+        radial-gradient(circle at 25% 20%, #2e7d32 0 24px, transparent 25px),
+        radial-gradient(circle at 45% 13%, #1f6b2c 0 20px, transparent 21px),
+        radial-gradient(circle at 65% 28%, #388e3c 0 26px, transparent 27px),
+        radial-gradient(circle at 85% 18%, #145c25 0 22px, transparent 23px),
+        radial-gradient(circle at 15% 45%, #2e8b3c 0 28px, transparent 29px),
+        radial-gradient(circle at 38% 52%, #1b5e20 0 24px, transparent 25px),
+        radial-gradient(circle at 58% 42%, #43a047 0 22px, transparent 23px),
+        radial-gradient(circle at 78% 55%, #267b32 0 30px, transparent 31px),
+        radial-gradient(circle at 8% 78%, #145c25 0 24px, transparent 25px),
+        radial-gradient(circle at 30% 82%, #2e7d32 0 30px, transparent 31px),
+        radial-gradient(circle at 52% 75%, #1f6b2c 0 26px, transparent 27px),
+        radial-gradient(circle at 74% 84%, #388e3c 0 28px, transparent 29px),
+        radial-gradient(circle at 92% 72%, #1b5e20 0 24px, transparent 25px),
+        linear-gradient(#4fa64f, #226b2a);
+}
+
+.tunel-terra::before,
+.tunel-terra::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 18% 30%, #66bb6a 0 10px, transparent 11px),
+        radial-gradient(circle at 36% 36%, #81c784 0 8px, transparent 9px),
+        radial-gradient(circle at 62% 18%, #66bb6a 0 9px, transparent 10px),
+        radial-gradient(circle at 72% 68%, #81c784 0 10px, transparent 11px),
+        radial-gradient(circle at 48% 88%, #66bb6a 0 9px, transparent 10px),
+        radial-gradient(circle at 88% 42%, #81c784 0 8px, transparent 9px);
+    opacity: 0.8;
+}
+
+.tunel-terra::after {
+    transform: translateY(40px);
+    opacity: 0.5;
+}
+
+.tunel-terra-esq {
+    left: 0;
+}
+
+.tunel-terra-dir {
+    right: 0;
+}
+
+/* Rodovia central em primeiro plano
+   A estrada fica acima do túnel e dos animais para reforçar o efeito subterrâneo. */
+.tunel-solo {
+    position: absolute;
+    top: 0;
+    left: 32%;
+    width: 36%;
+    height: 100%;
+    background:
+        linear-gradient(90deg, rgba(58, 38, 18, 0.85) 0 18%, transparent 18% 82%, rgba(58, 38, 18, 0.85) 82% 100%),
+        linear-gradient(#4b7f35, #2c642c);
+    z-index: 29;
+}
+
+.tunel-asfalto {
+    position: absolute;
+    top: 0;
+    left: 32%;
+    width: 36%;
+    height: 100%;
+    background-color: #333333;
+    z-index: 30;
+    box-shadow:
+        -18px 0 28px rgba(0, 0, 0, 0.24),
+        18px 0 28px rgba(0, 0, 0, 0.24);
+}
+
+
+
+.tunel-asfalto::before,
+.tunel-asfalto::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.20), rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.20));
+    pointer-events: none;
+}
+
+.tunel-asfalto::before {
+    left: 0;
+}
+
+.tunel-asfalto::after {
+    right: 0;
+}
+
+.tunel-faixa {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 8px;
+    height: 100%;
+    transform: translateX(-50%);
+    background: repeating-linear-gradient(to bottom,
+            #ffffff 0,
+            #ffffff 35px,
+            transparent 35px,
+            transparent 70px);
+    z-index: 31;
+    opacity: 0.8;
+}
+
+/* Carros */
+.tunel-carro {
+    position: absolute;
+    top: -120px;
+    width: 55px;
+    height: 90px;
+    border-radius: 12px;
+    background-color: #d93636;
+    z-index: 32;
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.25);
+}
+
+.tunel-carro::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 35px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #bde8ff;
+}
+
+.tunel-carro::after {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    width: 35px;
+    height: 18px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.18);
+}
+
+.tunel-carro-1 {
+    left: 39%;
+    background-color: #d93636;
+    animation: tunel-carro-descendo 8s linear infinite;
+}
+
+.tunel-carro-2 {
+    left: 53%;
+    background-color: #2c71d8;
+    animation: tunel-carro-subindo 11s linear infinite 2s;
+}
+
+.tunel-carro-3 {
+    left: 46%;
+    background-color: #f2c230;
+    animation: tunel-carro-descendo 10s linear infinite 5s;
+}
+
+@keyframes tunel-carro-descendo {
+    0% {
+        top: -120px;
+    }
+
+    100% {
+        top: 115%;
+    }
+}
+
+@keyframes tunel-carro-subindo {
+    0% {
+        top: 115%;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        top: -120px;
+        transform: rotate(180deg);
+    }
+}
+
+/* Cercas direcionadoras */
+.tunel-cerca {
+    position: absolute;
+    inset: 0;
+    z-index: 28;
+    pointer-events: none;
+}
+
+.tunel-cerca-bar {
+    position: absolute;
+    top: 118px;
+    width: 4px;
+    height: 90px;
+    border-radius: 3px;
+    background: #8b6914;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.tunel-cerca-fio,
+.tunel-cerca-fio2 {
+    position: absolute;
+    left: 18%;
+    width: 64%;
+    height: 2px;
+    background: #c8a020;
+    opacity: 0.65;
+}
+
+.tunel-cerca-fio {
+    top: 136px;
+}
+
+.tunel-cerca-fio2 {
+    top: 164px;
+    opacity: 0.46;
+}
+
+/* Galeria subterrânea
+   Fica atrás da rodovia para que os animais sumam no centro e reapareçam após a estrada. */
+.tunel-galeria {
+    position: absolute;
+    left: 16%;
+    bottom: 36px;
+    width: 68%;
+    height: 150px;
+    z-index: 6;
+    border-radius: 80px 80px 22px 22px;
+    background:
+        linear-gradient(180deg, rgba(129, 90, 45, 0.95) 0%, rgba(74, 47, 22, 0.98) 100%);
+    box-shadow:
+        inset 0 14px 24px rgba(255, 255, 255, 0.08),
+        inset 0 -18px 30px rgba(0, 0, 0, 0.35),
+        0 12px 24px rgba(0, 0, 0, 0.28);
+}
+
+.tunel-interior {
+    position: absolute;
+    left: 20%;
+    bottom: 44px;
+    width: 60%;
+    height: 118px;
+    z-index: 7;
+    border-radius: 68px 68px 16px 16px;
+    background:
+        radial-gradient(ellipse 65% 85% at 50% 42%, #2a1a05 0%, #0d0800 62%, #050300 100%);
+    box-shadow: inset 0 18px 30px rgba(0, 0, 0, 0.75);
+}
+
+.tunel-piso {
+    position: absolute;
+    left: 23%;
+    bottom: 36px;
+    width: 54%;
+    height: 28px;
+    z-index: 8;
+    border-radius: 0 0 14px 14px;
+    background: linear-gradient(180deg, #2b1d10, #120c06);
+}
+
+.tunel-drenagem {
+    position: absolute;
+    left: 36%;
+    bottom: 44px;
+    width: 28%;
+    height: 7px;
+    z-index: 9;
+    border-radius: 999px;
+    background: rgba(86, 150, 190, 0.45);
+    box-shadow: 0 0 12px rgba(86, 150, 190, 0.35);
+}
+
+/* Animais atravessando por dentro da passagem inferior */
+.tunel-animal {
+    position: absolute;
+    bottom: 58px;
+    font-size: 46px;
+    opacity: 0;
+    z-index: 12;
+    pointer-events: none;
+}
+
+.tunel-animal-esq {
+    left: -90px;
+    animation-name: tunel-animal-esquerda;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.tunel-animal-dir {
+    right: -90px;
+    animation-name: tunel-animal-direita;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.ta1 {
+    animation-duration: 14s;
+    animation-delay: 0s;
+}
+
+.ta2 {
+    animation-duration: 16s;
+    animation-delay: 4s;
+}
+
+.ta3 {
+    animation-duration: 13s;
+    animation-delay: 8s;
+}
+
+.ta4 {
+    animation-duration: 17s;
+    animation-delay: 11s;
+}
+
+@keyframes tunel-animal-esquerda {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    88% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(calc(100vw + 200px));
+        opacity: 0;
+    }
+}
+
+@keyframes tunel-animal-direita {
+    0% {
+        transform: translateX(0) scaleX(-1);
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    88% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(calc(-100vw - 200px)) scaleX(-1);
+        opacity: 0;
+    }
+}
+
+/* Responsivo */
+@media (max-width: 950px) {
+    .pi-card {
+        grid-template-columns: 70px 1fr;
+    }
+
+    .pi-info {
+        grid-column: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .tunel-cenario {
+        height: 430px;
+    }
+
+    .tunel-carro {
+        width: 46px;
+        height: 76px;
+    }
+
+    .tunel-carro::before {
+        width: 28px;
+        height: 17px;
+        left: 9px;
+    }
+
+    .tunel-galeria {
+        left: 12%;
+        width: 76%;
+        height: 142px;
+    }
+
+    .tunel-interior {
+        left: 17%;
+        width: 66%;
+        height: 112px;
+    }
+
+    .tunel-animal {
+        font-size: 40px;
+    }
+
+    .tunel-animal-esq {
+        left: -80px;
+    }
+
+    .tunel-animal-dir {
+        right: -80px;
+    }
+}
+
+@media (max-width: 700px) {
+    .pi-card {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 24px;
+        border-radius: 24px;
+    }
+
+    .pi-info {
+        grid-column: auto;
+    }
+
+    .pi-numero {
+        width: 56px;
+        height: 56px;
+        border-radius: 18px;
+    }
+
+    .tunel-section {
+        padding-bottom: 24px;
+    }
+
+    .tunel-cenario {
+        height: 360px;
+    }
+
+    .tunel-terra {
+        width: 30%;
+    }
+
+    .tunel-solo,
+    .tunel-asfalto {
+        left: 30%;
+        width: 40%;
+    }
+
+    .tunel-cerca-bar {
+        top: 112px;
+        height: 74px;
+    }
+
+    .tunel-cerca-fio,
+    .tunel-cerca-fio2 {
+        left: 14%;
+        width: 72%;
+    }
+
+    .tunel-cerca-fio {
+        top: 130px;
+    }
+
+    .tunel-cerca-fio2 {
+        top: 154px;
+    }
+
+    .tunel-galeria {
+        bottom: 28px;
+        height: 126px;
+    }
+
+    .tunel-interior {
+        bottom: 36px;
+        height: 96px;
+    }
+
+    .tunel-piso {
+        bottom: 28px;
+    }
+
+    .tunel-drenagem {
+        bottom: 36px;
+    }
+
+    .tunel-animal {
+        bottom: 48px;
+        font-size: 36px;
+    }
+}

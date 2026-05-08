@@ -1,53 +1,109 @@
 document.addEventListener("DOMContentLoaded", function () {
-    iniciarCarrosAleatorios();
+    iniciarMovimentoDosCarros();
 });
 
-function iniciarCarrosAleatorios() {
-    const carros = document.querySelectorAll(".carro");
+function iniciarMovimentoDosCarros() {
+    iniciarCarrosVerticais({
+        container: ".rodovia",
+        carros: ".carro",
+        pistas: [22, 42, 58, 76],
+        duracao: 4200,
+        atrasoInicial: 900
+    });
 
-    carros.forEach(function (carro, index) {
-        setTimeout(function () {
-            moverCarroAleatorio(carro);
-        }, index * 900);
+    iniciarCarrosVerticais({
+        container: ".s-rodovia",
+        carros: ".s-carro",
+        pistas: [22, 42, 58, 76],
+        duracao: 4300,
+        atrasoInicial: 1000
+    });
+
+    iniciarCarrosVerticais({
+        container: ".tunel-cenario",
+        carros: ".tunel-carro",
+        pistas: [43, 50, 57],
+        duracao: 4600,
+        atrasoInicial: 1000
     });
 }
 
-function moverCarroAleatorio(carro) {
-    const pistas = [22, 42, 58, 76];
-    const cores = ["#d93636", "#2c71d8", "#f2c230", "#ffffff", "#222222", "#e86f2f"];
+function iniciarCarrosVerticais(config) {
+    const area = document.querySelector(config.container);
 
-    const pistaAleatoria = pistas[Math.floor(Math.random() * pistas.length)];
-    const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+    if (!area) {
+        return;
+    }
 
-    const duracao = 4200;
-    const espera = gerarNumeroAleatorio(700, 2800);
+    const carros = area.querySelectorAll(config.carros);
 
-    carro.style.left = pistaAleatoria + "%";
-    carro.style.top = "-130px";
-    carro.style.backgroundColor = corAleatoria;
+    carros.forEach(function (carro, index) {
+        prepararCarro(carro);
+
+        setTimeout(function () {
+            moverCarroVertical(carro, area, config);
+        }, index * config.atrasoInicial);
+    });
+}
+
+function moverCarroVertical(carro, area, config) {
+    const pista = sortearItem(config.pistas);
+    const cor = sortearCor();
+    const espera = gerarNumeroAleatorio(700, 2600);
+
+    const alturaArea = area.offsetHeight;
+    const alturaCarro = carro.offsetHeight || 90;
+
+    carro.style.left = pista + "%";
+    carro.style.top = (-alturaCarro - 30) + "px";
+    carro.style.backgroundColor = cor;
+    carro.style.opacity = "1";
     carro.style.transform = "translateY(0)";
+
+    const distancia = alturaArea + alturaCarro + 60;
 
     const animacao = carro.animate(
         [
-            {
-                transform: "translateY(0)"
-            },
-            {
-                transform: "translateY(750px)"
-            }
+            { transform: "translateY(0)" },
+            { transform: "translateY(" + distancia + "px)" }
         ],
         {
-            duration: duracao,
+            duration: config.duracao,
             easing: "linear",
             fill: "forwards"
         }
     );
 
     animacao.onfinish = function () {
+        carro.style.opacity = "0";
+
         setTimeout(function () {
-            moverCarroAleatorio(carro);
+            moverCarroVertical(carro, area, config);
         }, espera);
     };
+}
+
+function prepararCarro(carro) {
+    carro.style.animation = "none";
+    carro.style.opacity = "0";
+    carro.style.willChange = "transform";
+}
+
+function sortearCor() {
+    const cores = [
+        "#d93636",
+        "#2c71d8",
+        "#f2c230",
+        "#ffffff",
+        "#222222",
+        "#e86f2f"
+    ];
+
+    return sortearItem(cores);
+}
+
+function sortearItem(lista) {
+    return lista[Math.floor(Math.random() * lista.length)];
 }
 
 function gerarNumeroAleatorio(min, max) {
