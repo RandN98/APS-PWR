@@ -1,0 +1,84 @@
+.site-footer {
+  position: relative;
+  padding: 60px 20px 24px;
+  background:
+    radial-gradient(circle at top left, rgba(155, 226, 111, 0.16), transparent 32%),
+    linear-gradient(180deg, #123d24 0%, #082414 100%);
+  color: #f4f8ef;
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 2px, transparent 2px);
+  background-size: 34px 34px;
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.footer-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 1fr;
+  gap: 36px;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.footer-logo span {
+  color: #9be26f;
+}
+
+.footer-brand p,
+.footer-message p,
+.footer-bottom p {
+  color: rgba(244, 248, 239, 0.86);
+  line-height: 1.7;
+}
+
+.footer-nav h2,
+.footer-message h2 {
+  margin-bottom: 16px;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-nav a {
+  color: rgba(244, 248, 239, 0.86);
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: #9be26f;
+  padding-left: 4px;
+}
+
+.footer-bottom {
+  position: relative;
+  z-index: 1;
+  max-width: 1150px;
+  margin: 42px auto 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 0.9rem;
+}
