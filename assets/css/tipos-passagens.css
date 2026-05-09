@@ -109,6 +109,14 @@
   margin-bottom: 0;
 }
 
+.tipo-passagem-suspensa-card:last-child {
+  margin-bottom: 0;
+}
+
+.tipo-passagem-subterranea-card:last-child {
+  margin-bottom: 0;
+}
+
 .tipo-destaque {
   background:
     linear-gradient(135deg, rgba(148, 201, 93, 0.24), rgba(255, 255, 255, 0.09));
@@ -200,6 +208,14 @@
     grid-template-columns: 70px 1fr;
   }
 
+  .tipo-passagem-suspensa-card {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .tipo-passagem-subterranea-card {
+    grid-template-columns: 70px 1fr;
+  }
+
   .tipo-passagem-info {
     grid-column: 2;
   }
@@ -211,6 +227,20 @@
   }
 
   .tipo-passagem-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .tipo-passagem-suspensa-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .tipo-passagem-subterranea-card {
     grid-template-columns: 1fr;
     gap: 18px;
     padding: 24px;
