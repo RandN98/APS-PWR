@@ -10,14 +10,115 @@
   <link rel="stylesheet" href="assets/css/navbar.css">
   <link rel="stylesheet" href="assets/css/footer.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/formulario.css">
 </head>
 
 <body>
-  
-  <div data-include="components/header.html"></div>
+    <nav class="navbar">
+    <a href="index.html" class="logo">Travessia <span>Ambiental</span></a>
 
-  <div data-include="components/footer.html"></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Início</a></li>
+      <li><a href="contPrincipal.html">Saiba Mais</a></li>
+      <li><a href="contatoForm.html">Contato</a></li>
+      <li><a href="sobreGrupo.html">Sobre Nós</a></li>
+    </ul>
+  </nav>
+  <br>
 
+  <div>
+    <form class="formulario"> <!--INÍCIO DO FORMULÁRIO-->
+      <h2 class="formulario-titulo">Entre em contato conosco!</h2>
+      <label class="formulario-lembrete">Campos marcados com * são de preenchimento obrigatório.</label>
+
+      <div class="formulario-nome">
+        <label for="nome" class="nome-titulo">Nome*:</label>
+        <input id="nome" type="text" required>
+        <label for="sobrenome" class="sobrenome-titulo">Sobrenome*:</label>
+        <input id="sobrenome" type="text" required>
+      </div>
+      
+      <div class="formulario-telefone">
+        <label for="telefone" class="telefone-titulo">Telefone:</label>
+        <input id="telefone" type="tel" placeholder="ex:(11)94040-7070" pattern="[0-9]{2}[0-9]{4}-[0-9]{4}">
+      </div>
+
+      <div class="formulario-email">
+        <label for="email" class="email-titulo">E-mail*:</label>
+        <input id="email" type="email" required>
+      </div>
+
+      <div class="formulario-data">
+        <label for="dataNasc" class="data-titulo">Data de Nascimento*:</label>
+        <input id="dataNasc" type="date" required>
+      </div>
+
+      <div class="formulario-generos">
+        <div>
+          <label class="generos-titulo">Gênero:</label>
+        </div>
+        <div class="formulario-opcoes-generos">
+          <div class="opcao-masculino">
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="escolhaGenero" id="masculino">
+          </div>
+          <div class="opcao-masculino">
+            <label for="feminino">Feminino</label>
+            <input type="radio" name="escolhaGenero" id="feminino">
+          </div>
+          <div class="opcao-masculino">
+            <label for="nao-binario">Não-Binário</label>
+            <input type="radio" name="escolhaGenero" id="nao-binario">
+          </div>
+        </div>
+      </div>
+
+      
+      
+      <div class="formulario-redes">
+        <div>
+          <label class="redes-titulo">Como nos conheceu:</label>  
+        </div>
+        <div class="formularios-opcoes-redes">
+          <div class="f-opcao-x">
+            <input type="checkbox" id="opcao-x">
+            <label for="opcao-x">X(ex-Twitter)</label>
+          </div>
+          <div class="f-opcao-instagram">
+            <input type="checkbox" id="opcao-instagram">
+            <label for="opcao-instagram">Instagram</label>
+          </div>
+          <div class="f-opcao-linkedin">
+            <input type="checkbox" id="opcao-linkedin">
+            <label for="opcao-linkedin">LinkedIn</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="formulario-estados">
+        <label for="localizacao" class="estados-titulo">Estado:</label> 
+          <select>
+            <option>SP</option>
+            <option>RJ</option>
+            <option>MG</option>
+            <option>SE</option>
+            <option>AM</option>
+            <option>PR</option>
+          </select>
+      </div>
+
+      <div class="formulario-sugestoes">
+        <label for="caixa-sugestoes" class="sugestoes-titulo">Deixe aqui seu comentário e sugestões!</label>
+        <textarea id="caixa-sugestoes" rows="10" cols="40"></textarea>
+      </div>
+
+      <div class="formulario-limpar">
+        <input type="reset" value="Limpar tudo">
+        <input type="submit" value="Enviar">
+      </div>
+
+    </form>
+  </div>
 </body>
 
 <script src="assets/js/includes.js"></script>
