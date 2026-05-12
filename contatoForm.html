@@ -14,16 +14,7 @@
 </head>
 
 <body>
-    <nav class="navbar">
-    <a href="index.html" class="logo">Travessia <span>Ambiental</span></a>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Início</a></li>
-      <li><a href="contPrincipal.html">Saiba Mais</a></li>
-      <li><a href="contatoForm.html">Contato</a></li>
-      <li><a href="sobreGrupo.html">Sobre Nós</a></li>
-    </ul>
-  </nav>
+  <div data-include="components/header.html"></div>
   <br>
 
   <div>
@@ -37,7 +28,7 @@
         <label for="sobrenome" class="sobrenome-titulo">Sobrenome*:</label>
         <input id="sobrenome" type="text" required>
       </div>
-      
+
       <div class="formulario-telefone">
         <label for="telefone" class="telefone-titulo">Telefone:</label>
         <input id="telefone" type="tel" placeholder="ex:(11)94040-7070" pattern="[0-9]{2}[0-9]{4}-[0-9]{4}">
@@ -73,11 +64,11 @@
         </div>
       </div>
 
-      
-      
+
+
       <div class="formulario-redes">
         <div>
-          <label class="redes-titulo">Como nos conheceu:</label>  
+          <label class="redes-titulo">Como nos conheceu:</label>
         </div>
         <div class="formularios-opcoes-redes">
           <div class="f-opcao-x">
@@ -96,15 +87,15 @@
       </div>
 
       <div class="formulario-estados">
-        <label for="localizacao" class="estados-titulo">Estado:</label> 
-          <select>
-            <option>SP</option>
-            <option>RJ</option>
-            <option>MG</option>
-            <option>SE</option>
-            <option>AM</option>
-            <option>PR</option>
-          </select>
+        <label for="localizacao" class="estados-titulo">Estado:</label>
+        <select>
+          <option>SP</option>
+          <option>RJ</option>
+          <option>MG</option>
+          <option>SE</option>
+          <option>AM</option>
+          <option>PR</option>
+        </select>
       </div>
 
       <div class="formulario-sugestoes">
@@ -119,6 +110,9 @@
 
     </form>
   </div>
+
+  <div data-include="components/footer.html"></div>
+
 </body>
 
 <script src="assets/js/includes.js"></script>
