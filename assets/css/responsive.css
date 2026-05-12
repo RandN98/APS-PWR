@@ -158,3 +158,32 @@
     font-size: 1.4rem;
   }
 }
+
+@media (max-width: 768px) {
+  .comparativo-travessias-section {
+    padding: 70px 16px;
+  }
+
+  .comparativo-travessias-header {
+    margin-bottom: 30px;
+  }
+
+  .comparativo-travessias-header p {
+    font-size: 1rem;
+  }
+
+  .comparativo-tabela-wrapper {
+    padding: 6px;
+    border-radius: 22px;
+  }
+
+  .comparativo-tabela {
+    min-width: 820px;
+  }
+
+  .comparativo-tabela th,
+  .comparativo-tabela td {
+    padding: 16px;
+    font-size: 0.92rem;
+  }
+}
